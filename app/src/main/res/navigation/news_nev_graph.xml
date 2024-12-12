@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/news_nev_graph"
+    app:startDestination="@id/headlinesFragment3">
+    <fragment
+        android:id="@+id/articleFragment2"
+        android:name="com.bitul.newsapp.ui.fragments.ArticleFragment"
+        android:label="ArticleFragment" >
+    <argument
+        android:name="article"
+        app:argType="com.bitul.newsapp.models.Article" />
+</fragment>
+
+    <fragment
+        android:id="@+id/favouritesFragment4"
+        android:name="com.bitul.newsapp.ui.fragments.FavouritesFragment"
+        android:label="FavouritesFragment" >
+        <action
+            android:id="@+id/action_favouritesFragment4_to_articleFragment2"
+            app:destination="@id/articleFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/headlinesFragment3"
+        android:name="com.bitul.newsapp.ui.fragments.HeadlinesFragment"
+        android:label="HeadlinesFragment" >
+        <action
+            android:id="@+id/action_headlinesFragment3_to_articleFragment2"
+            app:destination="@id/articleFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment3"
+        android:name="com.bitul.newsapp.ui.fragments.SearchFragment"
+        android:label="SearchFragment" >
+        <action
+            android:id="@+id/action_searchFragment3_to_articleFragment2"
+            app:destination="@id/articleFragment2" />
+    </fragment>
+</navigation>
